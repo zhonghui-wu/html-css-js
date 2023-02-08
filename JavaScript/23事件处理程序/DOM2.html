@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="a">按钮</button>
+
+    <script>
+        // 需要多个事件时就用这个
+        var a = document.getElementById('a');
+        a.addEventListener('click',function(){
+            console.log('点击了')
+        })
+        a.addEventListener('click',function(){
+            console.log('点击了1')
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后代选择器</title>
+    <style>
+        /* 影响ol下的所有li标签 */
+        ol li{
+        color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <ol>
+        <li>我</li>
+        <li>的</li>
+        <li>测</li>
+        <li>试</li>
+        <li>
+            <ul>
+                <li>test</li>
+                <li><span>test1</span></li>
+            </ul>
+        </li>
+    </ol>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>hello</div>
+    <div class="text">hello1</div>
+    <div id="text1">hello1</div>
+    <div class="nav">345</div>
+    <div class="nav">123</div>
+
+    <script>
+        var  div1 = document.getElementsByTagName('div')[0];
+        div1.innerHTML = 'wwwww'; // 修改原有内容
+        console.log(div1);
+
+        var div2 = document.getElementsByClassName('text')[0];
+        div2.innerHTML = '123213'; // 修改原有内容
+        console.log(div2);
+
+        var div3 = document.getElementById("text1");
+        div3.innerHTML='adsadaasd';
+        console.log(div3);
+        
+        var nav = document.querySelector('.nav');
+        console.log(nav);
+
+        var nav1 = document.querySelectorAll('.nav')[1];
+        console.log(nav1);
+    </script>
+</body>
+</html>

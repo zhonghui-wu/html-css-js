@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="这里填服务器地址" id = 'myForm' onsubmit="submitHandle">
+        <input type="text" name="username">
+        <button id = 'reset'>重置</button>
+        <button>提交</button>
+    </form>
+
+    <script>
+        var reset = document.getElementById('reset');
+        var myForm = document.getElementById('myForm');
+        reset.onclick = function(){
+            myForm.reset(); // 触发在表单上，清空表单
+        }
+        function submitHandle(){
+            console.log('提交到服务器')
+        }
+    </script>
+</body>
+</html>

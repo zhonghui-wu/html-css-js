@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>呼吸效果</title>
+    <style>
+        div{
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            background-color: aqua;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+            /* 配置动画 */
+            animation: breathe 1s linear 0s infinite alternate;
+        }
+        /* 鼠标移动至模块后暂停 */
+        div:hover{
+            animation-play-state: paused;
+        }
+        @keyframes breathe {
+            0%{
+                opacity: 0.1;
+                box-shadow: 0px 10px 30px rgba(196, 236, 14, 0.5);
+            }
+            25%{
+                opacity: 0.25;
+                box-shadow: 0px 10px 30px rgba(53, 34, 221, 0.5);
+            }
+            50%{
+                opacity: 0.5;
+                box-shadow: 0px 10px 30px rgba(245, 6, 6, 0.5);
+            }
+            75%{
+                opacity: 0.75;
+                box-shadow: 0px 10px 30px rgba(86, 206, 96, 0.5);
+            }
+            100%{
+                opacity: 1;
+                box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

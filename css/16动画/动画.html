@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画</title>
+    <style>
+        div{
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            background-color: aquamarine;
+            animation: MyAnimation 3s linear 0s infinite;
+        }
+        /* 鼠标移动到该div后触发的动画
+        div:hover{
+            width: 300px;
+            background-color: blue;
+        } */
+
+        /* 设置鼠标移动到模块暂停（paused） */
+        div:hover{
+            animation-play-state: paused;
+        }
+        /* 设置动画 */
+        @keyframes MyAnimation {
+            0%{
+                width: 500px;
+                background-color: aquamarine;
+            }
+            25%{
+                width: 700px;
+                background-color: red;
+            }
+            50%{
+                width: 900px;
+                background-color: blue;
+            }
+            75%{
+                width: 700px;
+                background-color: red;
+            }
+            100%{
+                width: 500px;
+                background-color: aquamarine;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

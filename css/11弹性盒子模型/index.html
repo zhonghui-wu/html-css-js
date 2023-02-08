@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹性盒子模型</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 500px;
+            background-color: darkgray;
+            /* 开启弹性盒子 */
+            display: flex;
+            /* 将子盒子横向排列row，反转横向排列右对齐row-reverse，纵向排列column，反转纵向排列从后往前column-reverse*/
+            flex-direction: row;
+            /* 将子盒子竖向靠左居上flex-start，中center，下flex-end摆放 */
+            justify-content: center;
+            /* 将子盒子竖向靠中间居上flex-start，中center，下flex-end摆放 */
+            align-items: center;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: red
+            
+            ;
+            /* 设置盒子等分占比 */
+            flex: 1;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            /* 设置盒子等分占比 */
+            flex: 2;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            /* 设置盒子等分占比 */
+            flex: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

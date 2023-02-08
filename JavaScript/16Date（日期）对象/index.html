@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 获取时间戳
+        console.log(Date.now());
+
+        var year = new Date(Date.now()).getFullYear();
+        // 月份是从0开始，所以要+1
+        var month = new Date(Date.now()).getMonth()+1;
+        var day = new Date(Date.now()).getDate();
+        var hour = new Date(Date.now()).getHours();
+        var min = new Date(Date.now()).getMinutes();
+        var sec = new Date(Date.now()).getSeconds();
+        // 打印当前时间
+        console.log(year+'-'+month+'-'+day+' '+hour+':'+min+':'+sec);
+        console.log(new Date()); //Thu Feb 02 2023 19:31:50 GMT+0800 (中国标准时间)
+
+
+        // 打印今年阴历剩余时间
+        function laftdays(){
+            var today = new Date();
+            // 最大月份和日期
+            var endYear = new Date(today.getFullYear(),11,31,23,59,59,999);
+            // 计算毫秒
+            var msDay= 24 * 60 * 60 * 1000;
+            var result = (endYear.getTime() - today.getTime()) / msDay;
+            // 向下取整数
+            console.log(Math.floor(result));
+        }
+        laftdays()
+    </script>
+</body>
+</html>

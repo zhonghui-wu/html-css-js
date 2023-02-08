@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="daohang">我是导航</div>
+    <div id="daohang"></div>
+
+    <script>
+        // 创建标签
+        var text = document.createElement('span');
+        // 创建内容
+        var content = document.createTextNode('wo shi wen ben');
+        // 创建属性
+        var id = document.createAttribute('id');
+        // 给属性添加属性值
+        id.value = 'root';
+        // 将内容添加到标签中
+        text.appendChild(content);
+        // 给标签添加属性
+        text.setAttributeNode(id);
+        console.log(text); // <span id="root">wo shi wen ben</span>
+        
+        // 获取id后将内容添加到body对应标签中
+        var daohang = document.getElementById('daohang');
+        var a = document.createTextNode('123456');
+        daohang.appendChild(a);
+    </script>
+</body>
+</html>

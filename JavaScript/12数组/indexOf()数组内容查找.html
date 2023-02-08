@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indexOf()数组内容查找</title>
+</head>
+<body>
+    <script>
+        var a = [1,2,3,4];
+        console.log(a.indexOf(4)); // 存在则返回下标，不存在则返回-1
+        // indexOf()中传的第二个数则是从第几位下标开始找
+        if(a.indexOf(2,1)>-1){
+            console.log('存在');
+        }else{
+            console.log('不存在');
+        }
+    </script>
+</body>
+</html>

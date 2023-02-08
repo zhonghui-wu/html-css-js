@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math对象</title>
+</head>
+<body>
+    <script>
+        // 将负数变整数
+        var a = -10;
+        console.log(Math.abs(a)); // 10
+
+        var b = 10.9;
+        // 向下取整
+        console.log(Math.floor(b)); // 10
+        // 向上取整
+        console.log(Math.ceil(b)); // 11
+
+        // 生成随机数
+        console.log(Math.random()); // 1以下的随机数，有小数
+        // 生产10-20之间的随机整数
+        function getRandom(min,max){
+            var num = Math.random() * (max-min) + min;
+            num = Math.floor(num);
+            console.log(num);
+        }
+        getRandom(10,20)
+    </script>
+</body>
+</html>

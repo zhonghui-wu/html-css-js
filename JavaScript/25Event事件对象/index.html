@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 500px;
+            height: 500px;
+            background-color: grey;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(245, 16, 16);
+        }
+    </style>
+</head>
+<body>
+    <button id = 'an'>按钮</button>
+    <a href="http://www.baidu.com" id = 'it'>baidu</a>
+    <div class="box1" id = 'test1'>
+        <div class="box2" id = 'test2'></div>
+    </div>
+
+    <script>
+        var an = document.getElementById("an");
+        // Event就是事件对象，可以获取事件对象的信息信息
+        an.onclick=function(e){
+            event.target.innerHTML = '点击之后';
+            console.log(event);
+        }
+
+        var it = document.getElementById('it');
+        it.onclick = function(e){
+            e.preventDefault(); // 这个方法阻止了a标签的跳转并记录事件
+            console.log('点击了');
+        }
+
+        // 冒泡事件就是子元素在父元素上面，当我点击了子元素后也会同步点击到父元素
+        var box1 = document.getElementById("test1");
+        box1.onclick=function(e){
+            console.log('点击了1');
+        }
+        var box2 = document.getElementById("test2");
+        box2.onclick=function(e){
+            e.stopPropagation(); // 这个方法阻止了冒泡事件，只点击到子元素
+            console.log('点击了2');
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="na">
+    <input type="text" id="password">
+
+    <script>
+        var na = document.getElementById('na');
+        na.oninput = function(e){
+            console.log(e.target.value); // 读取输入的数据
+        }
+        na.onselect = function(){
+            console.log('选中了'); // 记录选中事件
+        }
+
+        // onchange只会在失去焦点和提交时才会记录事件
+        var pwd = document.getElementById('password');
+        pwd.onchange = function(e){
+            console.log(e.target.value);
+        }
+    </script>
+</body>
+</html>

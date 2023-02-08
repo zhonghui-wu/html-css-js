@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>固定定位</title>
+    <style>
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            /* 固定定位，设置右边和下边可以显示成在对角显示，不会跟随文档流，一般用于浮窗 */
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+        }
+        p{
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"><p>hello</p></div>
+    <div class="box2"><p>hello</p></div>
+    <div class="box2"><p>hello</p></div>
+    <div class="box2"><p>hello</p></div>
+</body>
+</html>

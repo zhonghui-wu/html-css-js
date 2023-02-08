@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 用于取大图中的一部分，提升性能 -->
+    <title>雪碧图</title>
+    <style>
+        .icon1{
+            /* 将标签变成块状元素 */
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-image: url(1.jpg);
+            /* 加一个边框 */
+            border: 1px solid red;
+            /* 移动图片像素 */
+            background-position: -5px 3px;
+        }
+        .icon2{
+            /* 将标签变成块状元素 */
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-image: url(1.jpg);
+            /* 加一个边框 */
+            border: 1px solid red;
+            /* 移动图片像素 */
+            background-position: -245px -342px;
+        }
+    </style>
+</head>
+<body>
+    <span class="icon1"></span>
+    <span class="icon2"></span>
+</body>
+</html>

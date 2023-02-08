@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动</title>
+    <!-- 当容器空间不足以摆放内容时会跳到下一行摆放 -->
+    <style>
+        /* 利用浮动去除两个图片的间隙 */
+        img{
+            height: 200px;
+            float: left;
+        }
+        li{
+            /* 让排序变成从左往右排列 */
+            float: left;
+            /* 通过设置左右边距来使排序显示变的更好看 */
+            margin: 0 20px;
+        }
+    </style>
+</head>
+<body>
+    <div><img src="3.jpg" alt=""></div>
+    <div><img src="3.jpg" alt=""></div>
+    <div>
+        <ol>
+            <li><a href="#">序列1</a></li>
+            <li><a href="#">序列2</a></li>
+            <li><a href="#">序列3</a></li>
+        </ol>
+    </div>
+</body>
+</html>

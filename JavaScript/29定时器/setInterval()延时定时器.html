@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            /* 清晰度，最大是1，最小是0 */
+            opacity: 1; 
+        }
+    </style>
+</head>
+<body>
+    <div id = 'div1'></div>
+
+    <script>
+        // 颜色渐变案例
+        var div1 = document.getElementById('div1');
+        var opacity = 1;
+        var fade = setInterval(function(){ // 设置延时定时器
+            if(opacity>0){
+                opacity -= 0.05
+                div1.style.opacity = opacity // 替换最上面style的清晰度的值
+            }else{
+                clearInterval(fade) // 清空定时器
+            }
+        },60)
+    </script>
+</body>
+</html>

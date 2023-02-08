@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>媒体查询</title>
+    <style>
+        div{
+            width: 500px;
+            height: 500px;
+        }
+        /* 可以通过宽度来控制显示内容，一般用于手机、电脑、ipad三个端都能查看该页面 */
+        @media screen and (max-width: 768px){
+            div{
+                background-color: black;
+            }
+            .box1{
+                display: block;
+            }
+            .box2{
+                display: none;
+            }
+            .box3{
+                display: none;
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 996px){
+            div{
+                background-color: green;
+            }
+            .box1{
+                display: block;
+            }
+            .box2{
+                display: block;
+            }
+            .box3{
+                display: none;
+            }
+        }
+        @media screen and (min-width: 996){
+            div{
+                background-color: blue;
+            }
+            .box1{
+                display: block;
+            }
+            .box2{
+                display: block;
+            }
+            .box3{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <p class="box1">嘻嘻</p>
+    <p class="box2">哈哈</p>
+    <p class="box3">呵呵</p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>设置背景属性</title>
+    <style>
+        .box1{
+            /* 设置背景颜色 */
+            background-color: rgb(129, 160, 129);
+            /* 设置背景宽度 */
+            width: 500px;
+            /* 设置背景高度 */
+            height: 500px;
+        }
+        .box2{
+            /* 设置背景图片 */
+            background-image: url(3.jpg);
+            /* 设置背景宽度 */
+            width: 500px;
+            /* 设置背景高度 */
+            height: 500px;
+            /* 设置是否平铺 */
+            background-repeat: no-repeat;
+            /* 设置不压缩图片充满容器（cover），有切割。contain没有切割，但是不会充满屏幕 */
+            /* background-size: contain; */
+
+            /* 设置背景图片起始位置，默认是左上，left、right、center相组合 */
+            background-position: center center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>

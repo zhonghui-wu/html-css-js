@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inedxOf()用于判断字符是否存在</title>
+</head>
+<body>
+    <script>
+        var name = 'qewqasdasrwqr';
+        console.log(name.indexOf('r')); // 存在则返回下标，不存在则返回-1
+        console.log(name.indexOf('a',10)); // 接收的第二位是代表从第几位查找
+
+        // 一般用于判断内容是否存在
+        var str = '我是谁';
+        if(name.indexOf('是谁')>-1){
+            console.log('有');
+        }else{
+            console.log('没有');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout定时器</title>
+</head>
+<body>
+    <script>
+        var time = setTimeout(function(){
+            console.log('我好了')
+        },3000) // 3000是毫秒
+
+        clearTimeout(time) // 取消定时器
+
+        // 会有下面这个问题
+        var name = 'iw'
+        var user = {
+            name:'111',
+            ger:function(){
+                //this 永远指向当前调用者，如果回调函数是对象就会指向全局name
+                var that = this // 加这行就可解决指向全局的问题
+                setTimeout(function(){
+                    // 将this换成上面的that就可解决指向全局的问题
+                    // console.log(this.name);
+                    console.log(that.name);
+                }, 1000);
+            }
+        }
+        user.ger()
+    </script>
+
+
+</body>
+</html>

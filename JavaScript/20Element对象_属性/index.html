@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="test" id="root">lalalalal</div>
+
+    <script>
+        var root = document.getElementById('root');
+        // 修改id属性
+        root.id="root1";
+        // 修改class name
+        root.className = 'teee';
+        // 添加class属性
+        root.classList.add('teet');
+        // 移除class属性
+        root.classList.remove('teee');
+        // 可以修改文本，可以识别标签内容
+        root.innerHTML='54645';
+        // 只能修改文本，无法识别标签内容
+        root.innerText='123';
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id = 'srk'>
+    <input type="password" id = 'srk1'>
+
+    <script>
+        var srk = document.getElementById('srk');
+        srk.onkeydown = function(){
+            console.log('我按下了');
+        }
+        srk.onkeyup = function(e){
+            console.log(e);
+            // 一般是抬起时记录输入的内容
+            console.log(e.target.value); // 打印输入的内容
+            console.log('我抬起了');
+        }
+        var srk1 = document.getElementById('srk1');
+        srk1.onkeypress = function(e){
+            console.log(e.target.value);
+            if(e.keyCode===13){
+                console.log('我回车了');
+            }
+            
+        }
+    </script>
+</body>
+</html>

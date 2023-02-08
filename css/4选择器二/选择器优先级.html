@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器优先级</title>
+    <style>
+        .text{
+            color: blue;
+        }
+        .mytext{
+            color: brown;
+        }
+        #test{
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    <h3>全局选择器： *</h3>
+    <h3>元素选择器：标签名称</h3>
+    <h3>类选择器：class熟悉名称（.）</h3>
+    <h3>ID选择器：id熟悉名称（#）</h3>
+    <h3>行内样式1000>ID选择器100>CLASS选择器10>元素选择器1</h3>
+    <p style="color: red"class="text" id="test">我是一个优先级示例1</p>
+    <p class="text" id="test">我是一个优先级示例2</p>
+    <p class="text">我是一个优先级示例3</p>
+    <p class="text mytext">我是一个优先级示例3</p>
+</body>
+</html>

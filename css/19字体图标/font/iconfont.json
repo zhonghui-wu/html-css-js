@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "33097693",
+      "name": "病毒扫描",
+      "font_class": "bingdusaomiao",
+      "unicode": "100f4",
+      "unicode_decimal": 65780
+    },
+    {
+      "icon_id": "33097698",
+      "name": "信息故障",
+      "font_class": "xinxiguzhang",
+      "unicode": "100f5",
+      "unicode_decimal": 65781
+    },
+    {
+      "icon_id": "33097700",
+      "name": "加速",
+      "font_class": "jiasu",
+      "unicode": "100f6",
+      "unicode_decimal": 65782
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位的问题</title>
+    <style>
+        /* 当父级设置了定位时，则子级的定位会跟着父级的定位的模块移动 */
+        /* 如果父级没有设置绝对定位，则定位会跟着文档流 */
+        .d1{
+            width: 500px;
+            height: 500px;
+            background-color: rgb(95, 97, 95);
+            position: relative;
+            margin-left: 150px;
+        }
+        .box1{
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            /* 设置模块权重，权重大的叠在权重小的上面 */
+            z-index: 1;
+        }
+        .box2{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+            position: absolute;
+            left: 100px;
+            top: 60px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="d1">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
